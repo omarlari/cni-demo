@@ -1,5 +1,8 @@
 #!/bin/bash
+
+# Install dependencies:
 apt-get install pv
+
 ########################
 # include the magic
 ########################
@@ -14,7 +17,7 @@ pe "cd ~/cni"
 
 # Obtain binaries
 pe "curl -O -L https://github.com/containernetworking/cni/releases/download/v0.6.0/cni-amd64-v0.6.0.tgz"
-pe "https://github.com/containernetworking/plugins/releases/download/v0.7.5/cni-plugins-amd64-v0.7.5.tgz"
+pe "curl -O -L https://github.com/containernetworking/plugins/releases/download/v0.7.5/cni-plugins-amd64-v0.7.5.tgz"
 
 # unpack cni-tools
 pe "tar -xzvf cni-amd64-v0.6.0.tgz"
